@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class QueryServiceService {
-  postUrl = '/query';
+  postUrl = '/web-lab_war/query';
   headers = { 'Content-Type': 'application/json'};
   constructor(private http: HttpClient) { }
 

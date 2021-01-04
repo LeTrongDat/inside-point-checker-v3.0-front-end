@@ -7,8 +7,8 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ResultServiceService {
-  getUrl = '/result';
-  clearUrl = '/clear';
+  getUrl = '/web-lab_war/result';
+  clearUrl = '/web-lab_war/clear';
 
   constructor(private http: HttpClient) { }
   getResults(): Observable<Result[]> {

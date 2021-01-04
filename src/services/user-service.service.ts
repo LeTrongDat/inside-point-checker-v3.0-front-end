@@ -15,8 +15,8 @@ export class UserServiceService implements CanActivate {
   constructor(private http: HttpClient, private router: Router) {
     this.isLoggedIn = false;
     this.token = '';
-    this.registerUrl = '/register';
-    this.loginUrl = '/authenticate';
+    this.registerUrl = '/web-lab_war/register';
+    this.loginUrl = '/web-lab_war/authenticate';
   }
   register(user: User): Observable<any> {
     return this.http.post<any>(this.registerUrl, user);
