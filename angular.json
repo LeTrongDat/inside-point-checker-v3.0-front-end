@@ -30,8 +30,16 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/_overrides.css"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -127,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "web-app-fe2"
+  "defaultProject": "web-app-fe2",
+  "cli": {
+    "analytics": false
+  }
 }

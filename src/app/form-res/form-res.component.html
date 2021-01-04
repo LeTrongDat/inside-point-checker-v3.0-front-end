@@ -1,0 +1,28 @@
+<div class="p-d-flex">
+  <h2 class="p-mt-5">RESULT</h2>
+  <p-button class="p-m-3" label="Clear" (onClick)="clear()"></p-button>
+</div>
+<p-table [value]="results"
+         [scrollable]="true"
+         scrollHeight="500px">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>POINT X</th>
+      <th>POINT Y</th>
+      <th>RADIUS</th>
+      <th>HIT OR NOT?</th>
+      <th>EXECUTION TIME</th>
+      <th>CREATION TIME</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-result>
+    <tr>
+      <td>{{result.x}}</td>
+      <td>{{result.y}}</td>
+      <td>{{result.r}}</td>
+      <td>{{result.result}}</td>
+      <td>{{result.executionTime}}</td>
+      <td>{{result.creationTime}}</td>
+    </tr>
+  </ng-template>
+</p-table>

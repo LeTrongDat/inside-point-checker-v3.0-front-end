@@ -1,0 +1,21 @@
+#ctn {
+  background-color: #171719;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+h2 {
+  color: #e8c42a;
+}
+
+label {
+  color: white;
+}
+
+#message {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}

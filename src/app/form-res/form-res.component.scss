@@ -1,0 +1,15 @@
+h2 { color: #e8c42a; vertical-align: middle }
+
+tr, th { background-color: #171719 !important; }
+
+tr:nth-child(1) { background-color: rgba(100, 20, 20, 0.3) !important; }
+
+th, td {
+  font-size: 9px !important;
+  color: white !important;
+}
+
+td {
+  opacity: 0.7 !important;
+}
+

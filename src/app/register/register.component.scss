@@ -1,0 +1,21 @@
+#container {
+  background-color: #171719;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+h2 {
+  color: #e8c42a;
+}
+
+label {
+  color: white;
+}
+
+#message {
+  position: absolute !important;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}

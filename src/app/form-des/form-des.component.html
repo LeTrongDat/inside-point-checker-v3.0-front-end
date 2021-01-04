@@ -1,0 +1,187 @@
+<div id="description">
+    <h2>LAB's TASK</h2>
+    <p id="details">
+      The script should perform data validation and
+      return an HTML page with a table containing the obtained parameters
+      and the result of calculations - the fact of hitting or not hitting a point in the area.
+      Previous results should be persisted between queries and displayed in a table.
+    </p>
+    <table>
+      <tr>
+        <th>CONSTRAINTS</th>
+      </tr>
+      <tr>
+        <td id="constraints">
+          <ul>
+            <li>Value of X should be in (-2; 2)</li>
+            <li>Value of Y should be in the range (-3; 5)</li>
+            <li>Value of R should be in (1; 3)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th id="area-head">AREA FOR CHECKING</th>
+      </tr>
+      <tr>
+        <td id="area">
+          <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+               width="300" height="300" xml:space="preserve" (click)="onClick($event)">
+                <g>
+                    <line class="st0" x1="5" y1="150" x2="295" y2="150"/>
+                    <line class="st0" x1="150" y1="5" x2="150" y2="295"/>
+                    <g>
+                        <path class="st1" d="M150,0c-1.36,7.49-3.83,10.13-3.83,10.13c1.62-0.68,3.83-0.68,3.83-0.68s2.21,0,3.83,0.68
+            C153.83,10.13,151.36,7.49,150,0z"/>
+                    </g>
+                  <g>
+                        <path class="st1" d="M300,150c-7.49-1.36-10.13-3.83-10.13-3.83c0.68,1.62,0.68,3.83,0.68,3.83s0,2.21-0.68,3.83
+            C289.87,153.83,292.51,151.36,300,150z"/>
+                  </g>
+
+                  <circle class="st1" cx="150" cy="150" r="1.5"/>
+                  <rect [attr.x]="rX" [attr.y]="rY" [attr.height]="rH" [attr.width]="rW"
+                        style="fill: cornflowerblue"></rect>
+                    <path [attr.d]="circle" style="fill: cornflowerblue"></path>
+                    <path [attr.d]="triangle" style="fill: cornflowerblue"></path>
+                </g>
+
+            <circle id="point"
+                    [attr.cx] = "pX"
+                    [attr.cy] = "pY"
+                    r = "3px"
+                    [attr.fill]="pFill">
+                </circle>
+            <g class="st2">
+                    <rect x="150" y="120" class="st3" width="30" height="30"/>
+              <rect x="180" y="120" class="st3" width="30" height="30"/>
+              <rect x="210" y="120" class="st3" width="30" height="30"/>
+              <rect x="240" y="120" class="st3" width="30" height="30"/>
+              <rect x="30" y="120" class="st3" width="30" height="30"/>
+              <rect x="60" y="120" class="st3" width="30" height="30"/>
+              <rect x="90" y="120" class="st3" width="30" height="30"/>
+              <rect x="120" y="120" class="st3" width="30" height="30"/>
+              <rect x="150" y="90" class="st3" width="30" height="30"/>
+              <rect x="180" y="90" class="st3" width="30" height="30"/>
+              <rect x="210" y="90" class="st3" width="30" height="30"/>
+              <rect x="240" y="90" class="st3" width="30" height="30"/>
+              <rect x="30" y="90" class="st3" width="30" height="30"/>
+              <rect x="60" y="90" class="st3" width="30" height="30"/>
+              <rect x="90" y="90" class="st3" width="30" height="30"/>
+              <rect x="120" y="90" class="st3" width="30" height="30"/>
+              <rect x="150" y="60" class="st3" width="30" height="30"/>
+              <rect x="180" y="60" class="st3" width="30" height="30"/>
+              <rect x="210" y="60" class="st3" width="30" height="30"/>
+              <rect x="240" y="60" class="st3" width="30" height="30"/>
+              <rect x="30" y="60" class="st3" width="30" height="30"/>
+              <rect x="60" y="60" class="st3" width="30" height="30"/>
+              <rect x="90" y="60" class="st3" width="30" height="30"/>
+              <rect x="120" y="60" class="st3" width="30" height="30"/>
+              <rect x="150" y="30" class="st3" width="30" height="30"/>
+              <rect x="180" y="30" class="st3" width="30" height="30"/>
+              <rect x="210" y="30" class="st3" width="30" height="30"/>
+              <rect x="240" y="30" class="st3" width="30" height="30"/>
+              <rect x="30" y="30" class="st3" width="30" height="30"/>
+              <rect x="60" y="30" class="st3" width="30" height="30"/>
+              <rect x="90" y="30" class="st3" width="30" height="30"/>
+              <rect x="120" y="30" class="st3" width="30" height="30"/>
+              <rect x="150" y="150" class="st3" width="30" height="30"/>
+              <rect x="180" y="150" class="st3" width="30" height="30"/>
+              <rect x="210" y="150" class="st3" width="30" height="30"/>
+              <rect x="240" y="150" class="st3" width="30" height="30"/>
+              <rect x="30" y="150" class="st3" width="30" height="30"/>
+              <rect x="60" y="150" class="st3" width="30" height="30"/>
+              <rect x="90" y="150" class="st3" width="30" height="30"/>
+              <rect x="120" y="150" class="st3" width="30" height="30"/>
+              <rect x="150" y="180" class="st3" width="30" height="30"/>
+              <rect x="180" y="180" class="st3" width="30" height="30"/>
+              <rect x="210" y="180" class="st3" width="30" height="30"/>
+              <rect x="240" y="180" class="st3" width="30" height="30"/>
+              <rect x="30" y="180" class="st3" width="30" height="30"/>
+              <rect x="60" y="180" class="st3" width="30" height="30"/>
+              <rect x="90" y="180" class="st3" width="30" height="30"/>
+              <rect x="120" y="180" class="st3" width="30" height="30"/>
+              <rect x="150" y="210" class="st3" width="30" height="30"/>
+              <rect x="180" y="210" class="st3" width="30" height="30"/>
+              <rect x="210" y="210" class="st3" width="30" height="30"/>
+              <rect x="240" y="210" class="st3" width="30" height="30"/>
+              <rect x="30" y="210" class="st3" width="30" height="30"/>
+              <rect x="60" y="210" class="st3" width="30" height="30"/>
+              <rect x="90" y="210" class="st3" width="30" height="30"/>
+              <rect x="120" y="210" class="st3" width="30" height="30"/>
+              <rect x="150" y="240" class="st3" width="30" height="30"/>
+              <rect x="180" y="240" class="st3" width="30" height="30"/>
+              <rect x="210" y="240" class="st3" width="30" height="30"/>
+              <rect x="240" y="240" class="st3" width="30" height="30"/>
+              <rect x="30" y="240" class="st3" width="30" height="30"/>
+              <rect x="60" y="240" class="st3" width="30" height="30"/>
+              <rect x="90" y="240" class="st3" width="30" height="30"/>
+              <rect x="120" y="240" class="st3" width="30" height="30"/>
+                </g>
+            <text transform="matrix(1 0 0 1 135.0001 10.1274)" class="st4 st5">Y</text>
+            <text transform="matrix(1 0 0 1 289.8723 170.4893)" class="st4 st5">X</text>
+            <text transform="matrix(1 0 0 1 142.4003 158.6172)" class="st4 st6">0</text>
+            <text transform="matrix(1 0 0 1 112.4721 158.6172)" class="st4 st6">-1</text>
+            <text transform="matrix(1 0 0 1 80.2157 158.6172)" class="st4 st6">-2</text>
+            <text transform="matrix(1 0 0 1 50.5878 158.6172)" class="st4 st6">-3</text>
+            <text transform="matrix(1 0 0 1 20.3002 158.6172)" class="st4 st6">-4</text>
+            <text transform="matrix(1 0 0 1 175.0518 158.6172)" class="st4 st6">1</text>
+            <text transform="matrix(1 0 0 1 145.0522 129.9999)" class="st4 st6">1</text>
+            <text transform="matrix(1 0 0 1 142.4721 189.9999)" class="st4 st6">-1</text>
+            <text transform="matrix(1 0 0 1 140.2158 219.9999)" class="st4 st6">-2</text>
+            <text transform="matrix(1 0 0 1 140.5879 249.9999)" class="st4 st6">-3</text>
+            <text transform="matrix(1 0 0 1 140.3003 279.9999)" class="st4 st6">-4</text>
+            <text transform="matrix(1 0 0 1 142.7959 99.9999)" class="st4 st6">2</text>
+            <text transform="matrix(1 0 0 1 143.1679 69.9999)" class="st4 st6">3</text>
+            <text transform="matrix(1 0 0 1 142.8799 39.9999)" class="st4 st6">4</text>
+            <text transform="matrix(1 0 0 1 202.796 158.6172)" class="st4 st6">2</text>
+            <text transform="matrix(1 0 0 1 233.1676 158.6172)" class="st4 st6">3</text>
+            <text transform="matrix(1 0 0 1 262.8799 158.6172)" class="st4 st6">4</text>
+            </svg>
+          <p class="error" id="svg-err"></p>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<div id="container" class="p-d-flex p-flex-column p-flex-wrap">
+  <h2>DATA FORM</h2>
+  <div class="p-d-flex p-flex-column">
+    <div class="p-d-flex">
+      <p><b>POINT X</b></p>
+      <p-dropdown [options]="xValues"
+                  [(ngModel)]="pointX"
+                  (ngModelChange)="updateSVG()"
+                  optionLabel="name"
+                  optionValue="value"
+                  class="p-ml-2"
+                  [style]="{width: '100px'}">
+      </p-dropdown>
+
+      <p style="margin-left: 150px"><b>POINT Y</b></p>
+      <div class="p-d-flex p-flex-column p-as-center p-ml-2">
+        <p [ngModel]="pointY" class="p-mt-1 p-mb-1">{{pointY}}</p>
+        <p-slider [(ngModel)]="pointY"
+                  [min]="-3"
+                  [max]="5"
+                  [style]="{width: '100px'}"
+                  (ngModelChange)="updateSVG()"></p-slider>
+      </div>
+    </div>
+    <div class="p-d-flex p-mt-5">
+      <p><b>RADIUS</b></p>
+      <p-inputNumber [(ngModel)]="radius"
+                     [min]="1"
+                     [max]="3"
+                     [step]="0.5"
+                     [showButtons]="true"
+                     (ngModelChange)="updateSVG()"
+                     class="p-ml-2"
+                     style="width: 200px !important;">
+      </p-inputNumber>
+      <p-button class="p-as-top"
+                label="Submit"
+                style="text-align: right; margin-left: 150px"
+                (onClick)="onSubmit()"></p-button>
+    </div>
+  </div>
+</div>

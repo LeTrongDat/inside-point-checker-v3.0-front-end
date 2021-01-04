@@ -1,0 +1,26 @@
+<div id="container" class="p-d-flex p-flex-column p-jc-center p-ai-center">
+  <div>
+    <h2 class="p-m-2">SIGN UP</h2>
+    <div class="p-d-flex p-m-2 p-flex-column p-flex-md-row p-flex-xl-row">
+      <label class="p-mr-3 p-mb-1 p-pt-3" for="username">Username</label>
+      <div>
+        <input [(ngModel)]="username" placeholder="Username" id="username" type="text" aria-describedby="username-help" class="p-invalid" pInputText />
+      </div>
+    </div>
+
+    <div class="p-d-flex p-m-2 p-flex-column p-flex-md-row p-flex-xl-row">
+      <label class="p-mr-3 p-mb-1 p-pt-3" for="password">Password</label>
+      <div>
+        <input [(ngModel)]="password" placeholder="Password" id="password" type="password" aria-describedby="password-help" class="p-invalid" pInputText />
+      </div>
+    </div>
+    <div class="p-d-flex p-m-2">
+      <p-button class="p-mr-2" label="Confirm" (onClick)="onRegister()"></p-button>
+    </div>
+  </div>
+
+  <div id="message">
+    <p-messages [(value)]="msgs" [enableService]="false"></p-messages>
+  </div>
+</div>
+
